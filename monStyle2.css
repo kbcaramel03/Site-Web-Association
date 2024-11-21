@@ -1,0 +1,557 @@
+.cercle{
+  margin-top:-5px;
+  margin-left:-10px;
+  display:block;
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+}
+
+.cercle::before, .cercle::after,.cercle span:before,.cercle span:after,.cercle span span:after,.cercle span span:before,.cercle span span span:before{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid transparent;
+}
+
+.cercle span:before{
+  top:17px;
+  left:17px;
+  right:17px;
+  bottom:17px;
+  border-top-color:#8ef006;
+  animation: rond 1s forwards 1;
+}
+
+.cercle span:after{
+  top:25px;
+  left:25px;
+  right:25px;
+  bottom:25px;
+  border-top-color:#eb0a44;
+  animation: rond 2s forwards 1;
+}
+
+.cercle span span:before{
+  top:33px;
+  left:33px;
+  right:33px;
+  bottom:33px;
+  border-top-color:#1ba582;
+  animation-delay:1s;
+  animation: rond1 3s forwards 1;
+}
+
+.cercle span span:after{
+  top:9px;
+  left:9px;
+  right:9px;
+  bottom:9px;
+  border-top-color:orange;
+  animation: rond 3s forwards 1;
+}
+
+.cercle span span span::before{
+  top:1px;
+  left:1px;
+  right:1px;
+  bottom:1px;
+  border-top-color:black;
+  animation: rond1 2s forwards 1;
+}
+
+.cercle span span span:after{
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  border: 8px solid transparent;
+  border-top-color:white;
+  animation: rond2 1s forwards 1;
+}
+
+.cercle::after{
+  top:32px;
+  left:32px;
+  right:32px;
+  bottom:32px;
+  border: 8px solid transparent;
+  border-top-color:white;
+  animation: rond2 1s forwards 1;
+}
+
+.cercle:hover:after{
+  animation: rond3 1s infinite;
+}
+.cercle:hover span:after{
+  animation: rond4 1s infinite;
+}
+.cercle:hover span:before{
+  animation: rond5 1s infinite;
+}
+
+@keyframes rond{
+  from {
+    transform: rotate(-315deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@keyframes rond1{
+  from {
+    transform: rotate(-265deg);
+  }
+  to {
+    transform: rotate(95deg);
+  }
+}
+@keyframes rond2{
+  from {
+    transform: rotate(135deg);
+  }
+  to {
+    transform: rotate(495deg);
+  }
+}
+@keyframes rond3{
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(425deg);
+  }
+}
+@keyframes rond4{
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(425deg);
+  }
+}
+@keyframes rond5{
+  from {
+    transform: rotate(175deg);
+  }
+  to {
+    transform: rotate(545deg);
+  }
+}
+#menu{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top:-20px;
+  margin-left:-8px;
+  margin-right:-8px;
+  background-color:white;
+  padding:20px;
+  height:80px;
+  box-shadow:1px 10px 5px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  z-index: 1;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size:1.8Em;
+  color:#353b3b;
+  position:absolute;
+  margin-top:50px;
+  margin-left:100px;
+}
+.gauche{
+  transition: margin-left 3s;
+  margin-left:0px;
+}
+
+.droite{
+  transition: margin-left 0.5s;
+  margin-left:100px;
+}
+
+.button:hover{
+  border-top-color:#E1B428 !important;
+  border-bottom-color:#E1B428 !important;
+  color:#E1B428;
+}
+
+a:visited {
+  color: initial;
+}
+
+a{
+  color: initial;
+  text-decoration: none;
+}
+
+.button{
+  position:relative;
+  transition: .5s all ease-in-out;
+  border: 2px solid;
+  border-color:transparent;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  font-size: 20px;
+  margin-left:20px;
+}
+#bouton1{
+  margin-left:200px;
+}
+
+#bouton7{
+  background-image: url(admin.png);
+  background-position: center;
+  background-size: cover;
+  outline: none;
+  min-width:30px;
+  min-height:30px;
+  margin-left:20px;
+  position:absolute;
+  cursor: pointer;
+}
+
+#bouton7:hover{
+  opacity:80%;
+}
+
+#menu > div {
+  display: inline-block;
+  margin-right: 10px; /* Espacement entre les boutons */
+}
+.center{
+  margin:auto;
+  width:50%;
+}
+.message{
+  font-family: 'Montserrat', sans-serif;
+  background-color:#EEEEEE;
+  margin-top:10px;
+  margin-left:10px;
+  border-radius: 20px;
+  padding:10px;
+  box-shadow: 8px 8px 12px #aaa;
+}
+.message h4{
+  color: #E1B428;
+}
+
+.departement{
+  font-family: 'Montserrat', sans-serif;
+  background-color:#EEEEEE;
+  margin-top:10px;
+  margin-left:10px;
+  border-radius: 20px;
+  padding:10px;
+  box-shadow: 8px 8px 12px #aaa;
+}
+
+.departement h3{
+  color: #E1B428;
+}
+
+.lu{
+  position:absolute;
+  background-image: url(ouvert.png);
+  background-position: center;
+  background-size: cover;
+  outline: none;
+  margin-left:10px;
+  margin-top:5px;
+  width:20px;
+  height:20px;
+
+}
+
+.nonlu{
+  position:absolute;
+  background-image: url(fermer.png);
+  background-position: center;
+  background-size: cover;
+  outline: none;
+  margin-left:10px;
+  margin-top:5px;
+  width:20px;
+  height:20px;
+}
+
+.modal{
+  position:fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding-top: 20%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  overflow: auto;
+  opacity:1;
+}
+
+.fermerX{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fermerX:hover{
+  color: black;
+}
+
+.boitemessages{
+  font-family: 'Montserrat', sans-serif;
+  background-color:#EEEEEE;
+  margin: auto;
+  width: 30%;
+  padding:20px;
+  border-radius:20px;
+}
+
+body {
+  background-color: white;
+}
+.formations {
+    padding:20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #222626;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+    background-color: #EEEEEE;
+    width: 800px;
+    height:200px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+.milieu h1{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.milieu {
+  background-color: #BE4C50;
+}
+.milieu1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #E1B428;
+    text-align: center;
+    margin-left:-8px;
+    margin-right:-8px;
+    margin-top:-65px;
+    max-height:300px;
+    font-size:25px;
+}
+.formations h2 {
+    padding-top: 20px;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #BE4C50;
+}
+.barre {
+border: 3px solid #d8d8d8;
+border-radius: 15px;
+padding: 8px 5px;
+width: 300px;
+}
+.barre input {
+outline: none;
+}
+.barre input[type= »text »] {
+font-family: 'Montserrat', sans-serif;
+color: #222626;
+width: 70%;
+padding: 8px 15px 8px 30px;
+}
+.espesi{
+  border-radius: 10px;
+  color: white;
+  background-color: #BE4C50;
+  border-color:#BE4C50;
+}
+.titre{
+margin-left: auto;
+    margin-right: auto ;
+}
+.formAdmin{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+     padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #222626;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+    width: 400px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+.ajout{
+  border-radius: 10px;
+  color: white;
+  background-color: #E1B428;
+  border-color:#E1B428;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left:320px;
+  border-color:transparent;
+
+}
+
+.ajout:hover{
+  background-color:#F5E195;
+}
+
+.ifa{
+background-color:#FFFFFF;
+border-color:#f1f1f1;
+}
+.formation2 {
+    padding:20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #222626;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+    background-color: #EEEEEE;
+    width: 800px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+.formation3 {
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-top:10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:40px !important;
+    margin: auto;
+    background-color: #EEEEEE;
+    width: 1000px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 12px #aaa;
+}
+.formation3 h3{
+  color: #E1B428;
+}
+.ms{
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  background-color: #E1B428;
+  border-color:transparent;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.ms:hover{
+  background-color:#F5E195;
+}
+.milieu4 h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size:35px;
+    color: white;
+    text-align:center;
+}
+.milieu4 {
+  background-color: #E1B428;
+  text-align:center;
+  margin-left:-8px;
+  margin-right:-8px;
+  margin-top:-65px;
+}
+
+.titreInfo{
+  color:#E1B428;
+}
+
+.formation2{
+  margin-top:40px;
+}
+
+@media (max-width: 1000px) {
+  h3{
+    font-size:40px !important;
+  }
+  p{
+    font-size: 30px !important;
+  }
+  .espesi{
+    width:200px;
+    height:80px;
+    font-size: 30px;
+  }
+  input[type="text"] {
+    width: 380px;
+    height:50px;
+    font-size: 30px;
+  }
+  input[type="password"] {
+    width: 380px;
+    height:50px;
+    font-size: 30px;
+  }
+  input[type="submit"] {
+    width: 300px;
+    height:50px;
+    font-size: 25px;
+  }
+  label{
+    font-size:25px;
+  }
+  h4{
+    font-size: 30px;
+  }
+  select{
+    width:100px;
+    font-size:25px;
+  }
+  .ms{
+    width:120px;
+    height:70px;
+    font-size: 30px;
+  }
+  .formAdmin{
+    font-size: 30px;
+  }
+  .ajout{
+    width:120px;
+    height:50px;
+    font-size:30px;
+    margin-left:0px;
+  }
+  .milieu4{
+    margin-left:-10px;
+    width:120%;
+    height:
+  }
+  .milieu1{
+    margin-left:-10px;
+    width:120%;
+    height:
+  }
+}
+.ajout3{
+  border-radius: 10px;
+  color: white;
+  background-color: #E1B428;
+  border-color:#E1B428;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-color:transparent;
+
+}
+
+.ajout3:hover{
+  background-color:#F5E195;
+}

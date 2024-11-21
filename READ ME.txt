@@ -1,0 +1,6 @@
+Pour accéder au site, il faut ouvrir accueil.php
+
+L'identifiant admin est: admin
+Le mot de passe est: 123
+
+Il n'y a pas d'indicateur lors du changement de mot de passe, qu'il soit réussi ou non.
